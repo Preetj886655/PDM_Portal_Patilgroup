@@ -62,7 +62,11 @@ const insertProduct = db.prepare(`INSERT INTO products
   const insertNotification = db.prepare(`INSERT INTO notifications (id,type,message,user,time,read) VALUES (?,?,?,?,?,?)`);
   const insertColumn = db.prepare(`INSERT INTO columns (key,label,visible,order_idx,sortable,custom) VALUES (?,?,?,?,?,?)`);
 
-  const run = db.transaction ? null : null; // node:sqlite DatabaseSync doesn't expose a transaction() helper — use exec BEGIN/COMMIT manually
+ const run = db.transaction ? null : null; 
+  
+  // 1. Turn OFF foreign key checks before starting the transaction
+  db.exec('PRAGMA foreign_keys = OFF;');
+  
   db.exec('BEGIN');
   try {
     // 1. Insert Users FIRST so they exist when products reference them
@@ -113,10 +117,13 @@ const insertProduct = db.prepare(`INSERT INTO products
       insertColumn.run(c.key, c.label, c.visible ? 1 : 0, c.order, c.sortable ? 1 : 0, c.custom ? 1 : 0);
     }
 
-    db.exec('COMMIT');
-  }catch (err) {
+db.exec('COMMIT');
+  } catch (err) {
     db.exec('ROLLBACK');
     throw err;
+  } finally {
+    // 2. ALWAYS turn foreign key checks back ON for normal app operations
+    db.exec('PRAGMA foreign_keys = ON;');
   }
   return true;
 }
