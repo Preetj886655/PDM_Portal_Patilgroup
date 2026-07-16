@@ -67,15 +67,33 @@ const insertProduct = db.prepare(`INSERT INTO products
   try {
     for (const c of seedData.customers) insertCustomer.run(c.id, c.name, c.industry || null, c.contact || null, c.status || 'active');
 
-    for (const p of seedData.products) {
-      insertProduct.run(
-        p.itemId, p.model, p.modelDesc || null, p.childPartNo, p.partName, p.customer,
-        p.bomQty || 1, p.drawingNo || null, p.drawingRev || 'Rev-A', p.status || 'active',
-        p.partType || 'Machined', p.supplier || null, p.remarks || null,
-        p.dateCreated, p.lastModified, p.createdBy
-      );
-    }
+    // Purane loop ko is tarah update karein:
+for (const p of seedData.products) {
+  insertProduct.run(
+    p.itemId, 
+    p.model, 
+    p.modelDesc || null, 
+    p.childPartNo, 
+    p.partName, 
+    p.customer,
+    p.bomQty || 1, 
+    p.drawingNo || null, 
+    p.drawingRev || 'Rev-A', 
+    
+    // ─── YE DONO LINES YAHAN INSERT KAREIN ───
+    p.drawing2dLink || null, 
+    p.drawing3dLink || null,
+    // ─────────────────────────────────────────
 
+    p.status || 'active',
+    p.partType || 'Machined', 
+    p.supplier || null, 
+    p.remarks || null,
+    p.dateCreated, 
+    p.lastModified, 
+    p.createdBy
+  );
+}
     function insertChildren(assemblyId, parentId, children) {
       let order = 0;
       for (const child of children) {
