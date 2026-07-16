@@ -52,9 +52,9 @@ function seedIfEmpty(db) {
 // drawing_2d_link TEXT, drawing_3d_link TEXT
 
 // 2. Update the insert prepared statement:
-const insertProduct = db.prepare(`INSERT INTO products
-  (item_id, model, model_desc, child_part_no, part_name, customer, bom_qty, drawing_no, drawing_rev, drawing_2d_link, drawing_3d_link, status, part_type, supplier, remarks, date_created, last_modified, created_by)
-  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
+const insertProduct = db.prepare(`INSERT INTO products 
+    (item_id,model,model_desc,child_part_no,part_name,customer,bom_qty,drawing_no,drawing_rev,status,part_type,supplier,remarks,drawing_2d_link,drawing_3d_link,date_created,last_modified,created_by)
+    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
   const insertAssembly = db.prepare(`INSERT INTO assemblies (id,name,model,customer,drawing_no,rev) VALUES (?,?,?,?,?,?)`);
   const insertBomItem = db.prepare(`INSERT INTO bom_items (assembly_id,parent_id,item_id,part_name,qty,type,drawing_no,rev,sort_order) VALUES (?,?,?,?,?,?,?,?,?)`);
   const insertRevision = db.prepare(`INSERT INTO revisions (id,item_id,drawing_no,rev_number,date,modified_by,reason,previous_file,current_file,has_drawing) VALUES (?,?,?,?,?,?,?,?,?,?)`);
@@ -74,12 +74,16 @@ const insertProduct = db.prepare(`INSERT INTO products
     for (const c of seedData.customers) insertCustomer.run(c.id, c.name, c.industry || null, c.contact || null, c.status || 'active');
 
     // 3. Now it is safe to insert Products
+   // 3. Now it is safe to insert Products
     for (const p of seedData.products) {
       insertProduct.run(
-        p.itemId, p.model, p.modelDesc || null, p.childPartNo, p.partName, p.customer,
+        p.itemId, p.model, p.modelDesc || null, p.childPartNo, p.partName, (p.customer && String(p.customer).trim()) || null,
         p.bomQty || 1, p.drawingNo || null, p.drawingRev || 'Rev-A', p.status || 'active',
         p.partType || 'Machined', p.supplier || null, p.remarks || null,
-        p.dateCreated, p.lastModified, p.createdBy
+        (p.drawing2dLink && String(p.drawing2dLink).trim()) || null, (p.drawing3dLink && String(p.drawing3dLink).trim()) || null,
+        p.dateCreated || new Date().toISOString().split('T')[0], 
+        p.lastModified || new Date().toISOString().split('T')[0], 
+        p.createdBy || 'System Admin'
       );
     }
 
