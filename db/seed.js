@@ -65,35 +65,24 @@ const insertProduct = db.prepare(`INSERT INTO products
   const run = db.transaction ? null : null; // node:sqlite DatabaseSync doesn't expose a transaction() helper — use exec BEGIN/COMMIT manually
   db.exec('BEGIN');
   try {
+    // 1. Insert Users FIRST so they exist when products reference them
+    for (const u of DEMO_USERS) {
+      insertUser.run(u.id, u.username, bcrypt.hashSync(u.password, 10), u.name, u.role, u.email, u.department);
+    }
+
+    // 2. Insert Customers SECOND
     for (const c of seedData.customers) insertCustomer.run(c.id, c.name, c.industry || null, c.contact || null, c.status || 'active');
 
-    // Purane loop ko is tarah update karein:
-for (const p of seedData.products) {
-  insertProduct.run(
-    p.itemId, 
-    p.model, 
-    p.modelDesc || null, 
-    p.childPartNo, 
-    p.partName, 
-    p.customer,
-    p.bomQty || 1, 
-    p.drawingNo || null, 
-    p.drawingRev || 'Rev-A', 
-    
-    // ─── YE DONO LINES YAHAN INSERT KAREIN ───
-    p.drawing2dLink || null, 
-    p.drawing3dLink || null,
-    // ─────────────────────────────────────────
+    // 3. Now it is safe to insert Products
+    for (const p of seedData.products) {
+      insertProduct.run(
+        p.itemId, p.model, p.modelDesc || null, p.childPartNo, p.partName, p.customer,
+        p.bomQty || 1, p.drawingNo || null, p.drawingRev || 'Rev-A', p.status || 'active',
+        p.partType || 'Machined', p.supplier || null, p.remarks || null,
+        p.dateCreated, p.lastModified, p.createdBy
+      );
+    }
 
-    p.status || 'active',
-    p.partType || 'Machined', 
-    p.supplier || null, 
-    p.remarks || null,
-    p.dateCreated, 
-    p.lastModified, 
-    p.createdBy
-  );
-}
     function insertChildren(assemblyId, parentId, children) {
       let order = 0;
       for (const child of children) {
@@ -110,9 +99,7 @@ for (const p of seedData.products) {
       insertRevision.run(r.id, r.itemId, r.drawingNo || null, r.revNumber, r.date, r.modifiedBy, r.reason || null, r.previousFile || null, r.currentFile || null, r.hasDrawing ? 1 : 0);
     }
 
-    for (const u of DEMO_USERS) {
-      insertUser.run(u.id, u.username, bcrypt.hashSync(u.password, 10), u.name, u.role, u.email, u.department);
-    }
+    // (The users loop used to be here - it is now at the top)
 
     for (const n of seedData.notifications) {
       insertNotification.run(n.id, n.type, n.message, n.user, n.time, n.read ? 1 : 0);
@@ -123,7 +110,7 @@ for (const p of seedData.products) {
     }
 
     db.exec('COMMIT');
-  } catch (err) {
+  }catch (err) {
     db.exec('ROLLBACK');
     throw err;
   }
