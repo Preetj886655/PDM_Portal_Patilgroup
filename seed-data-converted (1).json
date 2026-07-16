@@ -1,0 +1,851 @@
+{
+  "customers": [
+    {
+      "id": "CUST-001",
+      "name": "Toyota Motor Corp",
+      "industry": "Automotive",
+      "contact": "procurement@toyota.com",
+      "status": "active"
+    },
+    {
+      "id": "CUST-002",
+      "name": "Bharat Heavy Electricals",
+      "industry": "Energy",
+      "contact": "purchase@bhel.in",
+      "status": "active"
+    },
+    {
+      "id": "CUST-003",
+      "name": "Siemens AG",
+      "industry": "Industrial",
+      "contact": "supply@siemens.de",
+      "status": "active"
+    },
+    {
+      "id": "CUST-004",
+      "name": "Tata Motors",
+      "industry": "Automotive",
+      "contact": "vendor@tatamotors.com",
+      "status": "active"
+    },
+    {
+      "id": "CUST-005",
+      "name": "Larsen & Toubro",
+      "industry": "Engineering",
+      "contact": "procurement@lnt.com",
+      "status": "active"
+    },
+    {
+      "id": "CUST-006",
+      "name": "Hyundai Motor India",
+      "industry": "Automotive",
+      "contact": "parts@hyundai.co.in",
+      "status": "active"
+    }
+  ],
+  "products": [
+    {
+      "itemId": "PG-FA-001-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-001-R0",
+      "partName": "Final Assembly",
+      "customer": "Indian Railway",
+      "bomQty": 1,
+      "drawingNo": "P201904",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/1hhtBSUBEirpLQbgZU3eJRr6cxq0bDhwc/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1uXoQoU3_-xZvZy3YLkfYLUTpeBF5plkL/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-002-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-002-R0",
+      "partName": "Specimen Mold Plate Compression Test",
+      "customer": "Indian Railway",
+      "bomQty": 2,
+      "drawingNo": "P201905",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/16JfkDT_g-5MMdT0mo9BU12wSdSUjC6QG/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1VZJYLbPQgxxKsUc5hiiWPLPWe6mYlRO0/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-003-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-003-R0",
+      "partName": "Specimen Mold Plate Tensile Test",
+      "customer": "Indian Railway",
+      "bomQty": 1,
+      "drawingNo": "P201906",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/1-i-kDAYgBKWVpuw2prMCOCcZBs3Nl3Yi/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1IPelFW-_SLlNP7bWME2OGxSbcCCPCN0_/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-004-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-004-R0",
+      "partName": "Inspection Gauges for Rail Pad",
+      "customer": "Indian Railway",
+      "bomQty": 3,
+      "drawingNo": "P201907",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/14Tzfx9FxZzjfhxEo7we3z0ZkNudHYPJn/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1pPJRdyqGez-vvYTjiD-8sxcm2hhCVqeu/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-005-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-005-R0",
+      "partName": "Inspection Gauges for Plastic Dowel",
+      "customer": "Indian Railway",
+      "bomQty": 1,
+      "drawingNo": "P201908",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/1k74jFjKXLy17bHgqbagHG7rB324Pw2O-/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1FVquDAueOMli7XutRXCIUGL1EdW4Iff1/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-006-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-006-R0",
+      "partName": "Inspection Gauges for Rail Guide Plate",
+      "customer": "Indian Railway",
+      "bomQty": 1,
+      "drawingNo": "P201909",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/1obZc2sN6Txpv93Un7ZBbKvfMktyP4vZ1/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1H0i1khm9iFrmcqaGpT8_4yBGp0NInBzz/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-007-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-007-R0",
+      "partName": "Fatigue test fixtures for Bharat Rail clamp\u00a0",
+      "customer": "Indian Railway",
+      "bomQty": 2,
+      "drawingNo": "P201910",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/14pJgQXOsC_51ZAXxy7f_4qMhJjVDlNrq/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/1El1l0E4J2GxuhEPh6g_2Qcmi7ccUL44h/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    },
+    {
+      "itemId": "PG-FA-008-R0",
+      "model": "ERC",
+      "modelDesc": "Final Assembly",
+      "childPartNo": "PG-PD-008-R0",
+      "partName": "Spring test fixtures for Bharat Rail clamp\u00a0",
+      "customer": "Indian Railway",
+      "bomQty": 1,
+      "drawingNo": "P201911",
+      "drawingRev": "R0",
+      "drawing2dLink": "https://drive.google.com/file/d/1lBvEEk7_4TsrnZOL6oFP1bRvdfzecX9k/view?usp=drive_link",
+      "drawing3dLink": "https://drive.google.com/file/d/16LwX0DVXZdtHAalHEZYhuPOBK24eeSOq/view?usp=drive_link",
+      "status": "active",
+      "partType": "Machined",
+      "supplier": null,
+      "remarks": null,
+      "dateCreated": "2026-07-16",
+      "lastModified": "2026-07-16",
+      "createdBy": "Admin",
+      "files": []
+    }
+  ],
+  "assemblies": [
+    {
+      "id": "ASM-001",
+      "name": "Tension Clamp Assembly 200mm",
+      "model": "TC-200",
+      "customer": "Toyota Motor Corp",
+      "drawingNo": "DWG-TC-200-000",
+      "rev": "Rev-C",
+      "children": [
+        {
+          "itemId": "PDM-00001",
+          "partName": "Tension Clamp Body",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-TC-200-001",
+          "rev": "Rev-C",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00002",
+          "partName": "Clamp Liner",
+          "qty": 2,
+          "type": "Cast",
+          "drawingNo": "DWG-TC-200-002",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00003",
+          "partName": "Spring Retainer",
+          "qty": 1,
+          "type": "Sheet Metal",
+          "drawingNo": "DWG-TC-200-003",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00004",
+          "partName": "Compression Spring",
+          "qty": 1,
+          "type": "Purchased",
+          "drawingNo": "DWG-TC-200-004",
+          "rev": "Rev-C",
+          "children": [
+            {
+              "partName": "Spring Wire EN47",
+              "qty": 1,
+              "type": "Raw Material",
+              "drawingNo": "-",
+              "rev": "-",
+              "children": []
+            }
+          ]
+        },
+        {
+          "itemId": "PDM-00005",
+          "partName": "Hex Bolt M10x40",
+          "qty": 4,
+          "type": "Standard",
+          "drawingNo": "DWG-TC-200-005",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00006",
+          "partName": "Flat Washer M10",
+          "qty": 4,
+          "type": "Standard",
+          "drawingNo": "DWG-TC-200-006",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00028",
+          "partName": "Dowel Pin 8x30",
+          "qty": 2,
+          "type": "Standard",
+          "drawingNo": "DWG-TC-200-007",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00034",
+          "partName": "Adjustment Screw",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-TC-200-008",
+          "rev": "Rev-D",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00040",
+          "partName": "Nameplate",
+          "qty": 1,
+          "type": "Purchased",
+          "drawingNo": "DWG-TC-200-009",
+          "rev": "Rev-A",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ASM-002",
+      "name": "Gear Coupling Assembly 500Nm",
+      "model": "GC-500",
+      "customer": "Bharat Heavy Electricals",
+      "drawingNo": "DWG-GC-500-000",
+      "rev": "Rev-D",
+      "children": [
+        {
+          "itemId": "PDM-00007",
+          "partName": "Coupling Hub A",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-GC-500-001",
+          "rev": "Rev-D",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00008",
+          "partName": "Coupling Hub B",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-GC-500-002",
+          "rev": "Rev-C",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00009",
+          "partName": "Gear Insert",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-GC-500-003",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00010",
+          "partName": "Oil Seal",
+          "qty": 2,
+          "type": "Purchased",
+          "drawingNo": "DWG-GC-500-004",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00011",
+          "partName": "Shaft Key 8x7x40",
+          "qty": 2,
+          "type": "Standard",
+          "drawingNo": "DWG-GC-500-005",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00029",
+          "partName": "Coupling Guard",
+          "qty": 1,
+          "type": "Sheet Metal",
+          "drawingNo": "DWG-GC-500-006",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00036",
+          "partName": "Grease Plug",
+          "qty": 2,
+          "type": "Standard",
+          "drawingNo": "DWG-GC-500-007",
+          "rev": "Rev-A",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ASM-003",
+      "name": "Hydraulic Actuator 100mm Bore",
+      "model": "HA-100",
+      "customer": "Larsen & Toubro",
+      "drawingNo": "DWG-HA-100-000",
+      "rev": "Rev-E",
+      "children": [
+        {
+          "itemId": "PDM-00012",
+          "partName": "Cylinder Barrel",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-HA-100-001",
+          "rev": "Rev-E",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00013",
+          "partName": "Piston Rod",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-HA-100-002",
+          "rev": "Rev-D",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00014",
+          "partName": "Piston",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-HA-100-003",
+          "rev": "Rev-C",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00015",
+          "partName": "End Cap",
+          "qty": 2,
+          "type": "Machined",
+          "drawingNo": "DWG-HA-100-004",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00016",
+          "partName": "O-Ring Seal Kit",
+          "qty": 1,
+          "type": "Purchased",
+          "drawingNo": "DWG-HA-100-005",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00030",
+          "partName": "Port Fitting G3/8",
+          "qty": 2,
+          "type": "Purchased",
+          "drawingNo": "DWG-HA-100-006",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00035",
+          "partName": "Cushion Sleeve",
+          "qty": 2,
+          "type": "Machined",
+          "drawingNo": "DWG-HA-100-007",
+          "rev": "Rev-A",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ASM-004",
+      "name": "Shaft Bearing Housing 300mm",
+      "model": "SB-300",
+      "customer": "Siemens AG",
+      "drawingNo": "DWG-SB-300-000",
+      "rev": "Rev-C",
+      "children": [
+        {
+          "itemId": "PDM-00017",
+          "partName": "Bearing Housing Body",
+          "qty": 1,
+          "type": "Cast",
+          "drawingNo": "DWG-SB-300-001",
+          "rev": "Rev-C",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00018",
+          "partName": "Bearing Cover",
+          "qty": 2,
+          "type": "Machined",
+          "drawingNo": "DWG-SB-300-002",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00019",
+          "partName": "Ball Bearing 6310",
+          "qty": 2,
+          "type": "Purchased",
+          "drawingNo": "DWG-SB-300-003",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00020",
+          "partName": "Grease Nipple",
+          "qty": 2,
+          "type": "Standard",
+          "drawingNo": "DWG-SB-300-004",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00031",
+          "partName": "Lock Nut M50",
+          "qty": 2,
+          "type": "Standard",
+          "drawingNo": "DWG-SB-300-005",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00037",
+          "partName": "Labyrinth Seal",
+          "qty": 2,
+          "type": "Machined",
+          "drawingNo": "DWG-SB-300-006",
+          "rev": "Rev-B",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ASM-005",
+      "name": "Press Brake Die 450mm",
+      "model": "PB-450",
+      "customer": "Tata Motors",
+      "drawingNo": "DWG-PB-450-000",
+      "rev": "Rev-C",
+      "children": [
+        {
+          "itemId": "PDM-00021",
+          "partName": "Upper Die Block",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-PB-450-001",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00022",
+          "partName": "Lower Die Block",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-PB-450-002",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00023",
+          "partName": "Die Spacer",
+          "qty": 4,
+          "type": "Machined",
+          "drawingNo": "DWG-PB-450-003",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00032",
+          "partName": "Clamping Strip",
+          "qty": 2,
+          "type": "Machined",
+          "drawingNo": "DWG-PB-450-004",
+          "rev": "Rev-C",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00038",
+          "partName": "Alignment Pin",
+          "qty": 4,
+          "type": "Machined",
+          "drawingNo": "DWG-PB-450-005",
+          "rev": "Rev-A",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "ASM-006",
+      "name": "Flexible Coupling 250Nm",
+      "model": "FC-250",
+      "customer": "Hyundai Motor India",
+      "drawingNo": "DWG-FC-250-000",
+      "rev": "Rev-C",
+      "children": [
+        {
+          "itemId": "PDM-00024",
+          "partName": "Coupling Flange A",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-FC-250-001",
+          "rev": "Rev-C",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00025",
+          "partName": "Coupling Flange B",
+          "qty": 1,
+          "type": "Machined",
+          "drawingNo": "DWG-FC-250-002",
+          "rev": "Rev-B",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00026",
+          "partName": "Elastomer Spider",
+          "qty": 1,
+          "type": "Purchased",
+          "drawingNo": "DWG-FC-250-003",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00027",
+          "partName": "Cap Screw M8x25",
+          "qty": 6,
+          "type": "Standard",
+          "drawingNo": "DWG-FC-250-004",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00033",
+          "partName": "Hub Key 6x6x20",
+          "qty": 2,
+          "type": "Standard",
+          "drawingNo": "DWG-FC-250-005",
+          "rev": "Rev-A",
+          "children": []
+        },
+        {
+          "itemId": "PDM-00039",
+          "partName": "Guard Ring",
+          "qty": 2,
+          "type": "Sheet Metal",
+          "drawingNo": "DWG-FC-250-006",
+          "rev": "Rev-A",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "id": "REV-001",
+      "itemId": "PDM-00001",
+      "drawingNo": "DWG-TC-200-001",
+      "revNumber": "Rev-A",
+      "date": "2024-01-15",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Initial release",
+      "previousFile": null,
+      "currentFile": "DWG-TC-200-001-A.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-002",
+      "itemId": "PDM-00001",
+      "drawingNo": "DWG-TC-200-001",
+      "revNumber": "Rev-B",
+      "date": "2024-08-20",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Dimension tolerance updated",
+      "previousFile": "DWG-TC-200-001-A.pdf",
+      "currentFile": "DWG-TC-200-001-B.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-003",
+      "itemId": "PDM-00001",
+      "drawingNo": "DWG-TC-200-001",
+      "revNumber": "Rev-C",
+      "date": "2025-06-20",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Material specification changed from EN8 to EN24",
+      "previousFile": "DWG-TC-200-001-B.pdf",
+      "currentFile": "DWG-TC-200-001-C.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-004",
+      "itemId": "PDM-00007",
+      "drawingNo": "DWG-GC-500-001",
+      "revNumber": "Rev-A",
+      "date": "2024-03-10",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Initial release",
+      "previousFile": null,
+      "currentFile": "DWG-GC-500-001-A.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-005",
+      "itemId": "PDM-00007",
+      "drawingNo": "DWG-GC-500-001",
+      "revNumber": "Rev-B",
+      "date": "2024-07-15",
+      "modifiedBy": "Amit Sharma",
+      "reason": "Bore diameter modified per customer request",
+      "previousFile": "DWG-GC-500-001-A.pdf",
+      "currentFile": "DWG-GC-500-001-B.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-006",
+      "itemId": "PDM-00007",
+      "drawingNo": "DWG-GC-500-001",
+      "revNumber": "Rev-C",
+      "date": "2024-12-01",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Surface finish specification added",
+      "previousFile": "DWG-GC-500-001-B.pdf",
+      "currentFile": "DWG-GC-500-001-C.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-007",
+      "itemId": "PDM-00007",
+      "drawingNo": "DWG-GC-500-001",
+      "revNumber": "Rev-D",
+      "date": "2025-06-28",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Heat treatment process updated",
+      "previousFile": "DWG-GC-500-001-C.pdf",
+      "currentFile": "DWG-GC-500-001-D.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-008",
+      "itemId": "PDM-00012",
+      "drawingNo": "DWG-HA-100-001",
+      "revNumber": "Rev-A",
+      "date": "2024-04-01",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Initial release",
+      "previousFile": null,
+      "currentFile": "DWG-HA-100-001-A.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-009",
+      "itemId": "PDM-00012",
+      "drawingNo": "DWG-HA-100-001",
+      "revNumber": "Rev-B",
+      "date": "2024-06-15",
+      "modifiedBy": "Amit Sharma",
+      "reason": "Bore honing tolerance tightened",
+      "previousFile": "DWG-HA-100-001-A.pdf",
+      "currentFile": "DWG-HA-100-001-B.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-010",
+      "itemId": "PDM-00012",
+      "drawingNo": "DWG-HA-100-001",
+      "revNumber": "Rev-C",
+      "date": "2024-09-20",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Port thread changed to SAE",
+      "previousFile": "DWG-HA-100-001-B.pdf",
+      "currentFile": "DWG-HA-100-001-C.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-011",
+      "itemId": "PDM-00012",
+      "drawingNo": "DWG-HA-100-001",
+      "revNumber": "Rev-D",
+      "date": "2025-02-10",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Rod seal groove dimension corrected",
+      "previousFile": "DWG-HA-100-001-C.pdf",
+      "currentFile": "DWG-HA-100-001-D.pdf",
+      "hasDrawing": true
+    },
+    {
+      "id": "REV-012",
+      "itemId": "PDM-00012",
+      "drawingNo": "DWG-HA-100-001",
+      "revNumber": "Rev-E",
+      "date": "2025-06-29",
+      "modifiedBy": "Rajesh Kumar",
+      "reason": "Added cross-drilling for cushion adjustment",
+      "previousFile": "DWG-HA-100-001-D.pdf",
+      "currentFile": "DWG-HA-100-001-E.pdf",
+      "hasDrawing": true
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "type": "revision",
+      "message": "DWG-TC-200-001 revised to Rev-C",
+      "user": "Rajesh Kumar",
+      "time": "2025-06-20T10:30:00",
+      "read": false
+    },
+    {
+      "id": 2,
+      "type": "upload",
+      "message": "New STEP file uploaded for PDM-00035",
+      "user": "Rajesh Kumar",
+      "time": "2025-06-30T14:15:00",
+      "read": false
+    },
+    {
+      "id": 3,
+      "type": "bom",
+      "message": "BOM modified for Tension Clamp TC-200",
+      "user": "Amit Sharma",
+      "time": "2025-06-28T09:00:00",
+      "read": false
+    },
+    {
+      "id": 4,
+      "type": "product",
+      "message": "New product PDM-00039 added \u2013 Guard Ring",
+      "user": "Amit Sharma",
+      "time": "2025-06-30T11:45:00",
+      "read": true
+    },
+    {
+      "id": 5,
+      "type": "revision",
+      "message": "DWG-HA-100-001 revised to Rev-E",
+      "user": "Rajesh Kumar",
+      "time": "2025-06-29T16:20:00",
+      "read": true
+    },
+    {
+      "id": 6,
+      "type": "upload",
+      "message": "Drawing uploaded for Flexible Coupling FC-250",
+      "user": "Priya Singh",
+      "time": "2025-06-26T08:30:00",
+      "read": true
+    },
+    {
+      "id": 7,
+      "type": "bom",
+      "message": "BOM updated for Hydraulic Actuator HA-100",
+      "user": "Rajesh Kumar",
+      "time": "2025-06-25T13:00:00",
+      "read": true
+    }
+  ]
+}
