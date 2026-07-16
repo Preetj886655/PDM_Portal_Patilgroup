@@ -25,8 +25,8 @@ const DEFAULT_COLUMNS = [
   { key:'bomQty',      label:'BOM Qty.',                visible:true, order:7,  sortable:false, custom:false },
   { key:'drawingNo',   label:'Drawing No.',             visible:true, order:8,  sortable:true,  custom:false },
   { key:'drawingRev',  label:'Drawing Revision No.',    visible:true, order:9,  sortable:false, custom:false },
-  { key:'drawing2d',   label:'Drawing 2D Link',         visible:true, order:10, sortable:false, custom:false },
-  { key:'drawing3d',   label:'Drawing 3D Link',         visible:true, order:11, sortable:false, custom:false },
+  { key:'drawing2dLink', label:'Drawing 2D Link', visible:true, order:10, sortable:false,       custom:false },
+  { key:'drawing3dLink', label:'Drawing 3D Link', visible:true, order:11, sortable:false,       custom:false },
   { key:'partType',    label:'Type',                    visible:true, order:12, sortable:false, custom:false },
   { key:'status',      label:'Status',                  visible:true, order:13, sortable:true,  custom:false },
   { key:'lastModified',label:'Modified',                visible:true, order:14, sortable:true,  custom:false },
@@ -48,9 +48,13 @@ function seedIfEmpty(db) {
   if (count > 0) return false; // already seeded / has real data — never overwrite
 
   const insertCustomer = db.prepare(`INSERT INTO customers (id,name,industry,contact,status) VALUES (?,?,?,?,?)`);
-  const insertProduct = db.prepare(`INSERT INTO products
-    (item_id,model,model_desc,child_part_no,part_name,customer,bom_qty,drawing_no,drawing_rev,status,part_type,supplier,remarks,date_created,last_modified,created_by)
-    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
+  // 1. Update your table creation schema to include:
+// drawing_2d_link TEXT, drawing_3d_link TEXT
+
+// 2. Update the insert prepared statement:
+const insertProduct = db.prepare(`INSERT INTO products
+  (item_id, model, model_desc, child_part_no, part_name, customer, bom_qty, drawing_no, drawing_rev, drawing_2d_link, drawing_3d_link, status, part_type, supplier, remarks, date_created, last_modified, created_by)
+  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
   const insertAssembly = db.prepare(`INSERT INTO assemblies (id,name,model,customer,drawing_no,rev) VALUES (?,?,?,?,?,?)`);
   const insertBomItem = db.prepare(`INSERT INTO bom_items (assembly_id,parent_id,item_id,part_name,qty,type,drawing_no,rev,sort_order) VALUES (?,?,?,?,?,?,?,?,?)`);
   const insertRevision = db.prepare(`INSERT INTO revisions (id,item_id,drawing_no,rev_number,date,modified_by,reason,previous_file,current_file,has_drawing) VALUES (?,?,?,?,?,?,?,?,?,?)`);
